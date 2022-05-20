@@ -327,8 +327,7 @@ namespace Parser {
 	void SetStepsPerSecond(std::string_view value, int &stepsPerSecond)
 	{
 		stepsPerSecond = ReturnValidNumber(value);
-		if (stepsPerSecond < MIN_STEPS_PER_SECOND ||
-		    stepsPerSecond > MAX_STEPS_PER_SECOND) {
+		if (stepsPerSecond < MIN_STEPS_PER_SECOND) {
 			throw std::out_of_range("Value is out of range.");
 		}
 	}
